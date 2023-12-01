@@ -8,3 +8,7 @@ export const generateToken = (telegram_id: string) => {
         expiresIn: EXPIRES_IN
     });
 };
+
+export const verifyToken = (token: string) => {
+    return jwt.verify(token, SECRET_KEY);
+};

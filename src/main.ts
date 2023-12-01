@@ -14,7 +14,7 @@ async function bootstrap(): Promise<void> {
         });
         console.log(`[${getCurrentTime()}] - Connection to the database has been established successfully.`);
 
-        await database.sync({ force: true, logging: false });
+        await database.sync({ logging: false });
         console.log(`[${getCurrentTime()}] - Models synced to the database successfully.`);
         server.listen(SERVER_PORT, () => {
             console.log(`[${getCurrentTime()}] - Server running on ${SERVER_PORT}-port!`);

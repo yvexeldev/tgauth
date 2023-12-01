@@ -1,0 +1,44 @@
+{
+    "name": "telegrafbot-nt",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "prebuild": "rimraf ./build",
+        "dev:ts": "tsc --watch",
+        "dev:js": "nodemon build/main",
+        "build": "npm run prebuild && npx tsc",
+        "start": "npm run build && node build/main",
+        "lint": "npx eslint ./src",
+        "format": "npx eslint ./src --fix"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/express": "^4.17.21",
+        "@types/node": "^18.11.17",
+        "@typescript-eslint/eslint-plugin": "^5.47.0",
+        "@typescript-eslint/parser": "^5.47.0",
+        "dotenv": "^16.3.1",
+        "eslint": "^8.30.0",
+        "husky": "^8.0.2",
+        "nodemon": "^3.0.1",
+        "prettier": "^2.8.1",
+        "rimraf": "^3.0.2",
+        "ts-node": "^10.9.1"
+    },
+    "dependencies": {
+        "@types/jsonwebtoken": "^9.0.5",
+        "cache-manager": "^5.3.1",
+        "class-validator": "^0.14.0",
+        "express": "^4.18.2",
+        "grammy": "^1.19.2",
+        "jsonwebtoken": "^9.0.2",
+        "pg": "^8.11.3",
+        "sequelize": "^6.35.1",
+        "sequelize-typescript": "^2.1.6",
+        "userland": "^0.4.1"
+    }
+}
